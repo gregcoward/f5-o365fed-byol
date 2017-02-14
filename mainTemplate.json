@@ -171,7 +171,7 @@
     "iappTemplate": "f5.microsoft_office_365_idp.v1.1.0.tmpl",
     "iappUrl": "[concat(parameters('baseUrl'),'/files/',variables('iappTemplate'))]",
     "runScripts": "runScripts.js",
-    "runScriptsUrl": "[concat(parameters('baseUrl'),'/',variables('runScripts'))]",
+    "runScriptsUrl": "[concat(parameters('baseUrl'),'/files/',variables('runScripts'))]",
     "asId": "[resourceId('Microsoft.Network/availabilitySets',variables('availabilitySetName'))]",
     "lbId": "[resourceId('Microsoft.Network/loadBalancers',variables('loadBalancerName'))]",
     "frontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
