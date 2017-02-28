@@ -18,7 +18,7 @@
             "name": "numberOfInstances",
             "type": "Microsoft.Common.DropDown",
             "label": "Number of BIG-IPs",
-            "defaultValue": "2",
+            "defaultValue": "1",
             "toolTip": "Select the number of BIG-IPs to deploy, (1 or 2).",
             "constraints": {
               "allowedValues": [
@@ -103,10 +103,10 @@
             },
             "osPlatform": "Linux",
             "imageReference": {
-              "publisher": "f5-networks",
-              "offer": "f5-big-ip-hourly",
-              "sku": "[concat('f5-bigip-virtual-edition-', steps('bigipSettings').licensedBandwidth,'-best-hourly')]"
-             }
+                "publisher": "f5-networks",
+                "offer": "f5-big-ip",
+                "sku": "f5-bigip-virtual-edition-best-byol"
+          }
           },
           {
             "name": "virtualNetwork",
