@@ -165,7 +165,7 @@
               "regex": "^[A-Z]{5}-[A-Z]{5}-[A-Z]{5}-[A-Z]{5}-[A-Z]{7}$",
               "validationMessage": "Provide the BIG-IP licence key in XXXXX-XXXXX-XXXXX-XXXXX-XXXXXXX format."
             },
-            "visible": "[equals(int(steps('bigipSettings').numberOfInstances), 2)]"
+            "visible": "[equals(steps('bigipSettings').numberOfInstances, '2')]"
           },
           {
             "name": "bigip1IP",
