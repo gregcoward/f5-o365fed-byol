@@ -140,7 +140,7 @@
     },
     "vnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.10.0.0/16",
+      "defaultValue": "10.0.0.0/16",
       "metadata": {
         "description": "Specify the virtual network address space."
       }
