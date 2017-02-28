@@ -184,7 +184,7 @@
       "metadata": {
         "description": "Specify source address range for mgmt access."
       }
-    },
+    }
   },
   "variables": {
     "apiVersionCompute": "2016-03-30",
