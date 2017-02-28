@@ -69,7 +69,7 @@
       }
     },
     "adminPassword": {
-      "type": "string",
+      "type": "securestring",
       "metadata": {
         "description": "The admin account passowrd"
       }
