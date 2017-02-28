@@ -140,7 +140,7 @@
     },
     "vnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.0.0/16",
+      "defaultValue": "10.2.0.0/16",
       "metadata": {
         "description": "Specify the virtual network address space."
       }
@@ -154,7 +154,7 @@
     },
     "subnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.0.1.0/24",
+      "defaultValue": "10.2.1.0/24",
       "metadata": {
         "description": "Specify the virtual subnet address space."
       }
@@ -198,6 +198,8 @@
     "bigipLink": "[concat(parameters('baseUrl'),'/bigip-byol',parameters('numberOfInstances'),'.json')]",
     "availabilitySetName": "[concat(variables('bigipNamePrefix'),'-avset')]",
     "nsgName": "[concat(variables('bigipNamePrefix'),'-nsg')]",
+    "ipPiecesNew": "[split(parameters('subnetAddressPrefix'),'.')]",
+    "providedIPPrefixNew": "[concat(variables('ipPiecesNew')[0],'.',variables('ipPiecesNew')[1],'.',variables('ipPiecesNew')[2],'.')]",
     "ipPieces": "[split(parameters('bigip1IP'),'.')]",
     "providedlastOctet": "[int(variables('ipPieces')[3])]",
     "providedIPPrefix": "[concat(variables('ipPieces')[0],'.',variables('ipPieces')[1],'.',variables('ipPieces')[2],'.')]",
@@ -207,7 +209,7 @@
         "lastOctet": "[variables('providedlastOctet')]"
       },
       "new": {
-        "prefix": "10.0.1.",
+        "prefix": "[variables('providedIPPrefixNew')]",
         "lastOctet": 5
       }
     },

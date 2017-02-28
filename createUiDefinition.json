@@ -57,7 +57,6 @@
               "sshPublicKey": ""
             },
             "constraints": {
-              "required": true
             },
             "options": {
               "hideConfirmation": false
