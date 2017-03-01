@@ -175,6 +175,7 @@
     },
     "bigip1IP": {
       "type": "string",
+      "defaultValue": "0.0.0.0",
       "metadata": {
         "description": "Specify your Active Directory domain controller IP."
       }
