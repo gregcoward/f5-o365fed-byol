@@ -291,7 +291,7 @@
       "location": "[location()]",
       "numberOfInstances": "[int(steps('bigipSettings').numberOfInstances)]",
       "adminUsername": "[steps('bigipSettings').adminUsername]",
-      "adminPassword": "[steps('bigipSettings').adminpassword]",
+      "adminPassword": "[steps('bigipSettings').adminpassword.password]",
       "instanceType": "[steps('bigipSettings').instanceType]",
       "licenseToken1": "[steps('bigipSettings').licenseToken1]",
       "licenseToken2": "[steps('bigipSettings').licenseToken1]",
